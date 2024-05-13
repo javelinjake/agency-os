@@ -24,18 +24,14 @@ export default defineNuxtConfig({
 
 	css: ['~/assets/css/tailwind.css', '~/assets/css/main.css'],
 
-	modules: [
-		'@nuxt/devtools', // https://devtools.nuxtjs.org/
-		'@nuxt/image',
-		'@nuxt/ui',
-		'@nuxtjs/color-mode',
-		'@nuxtjs/google-fonts',
-		'@vueuse/motion/nuxt', // https://motion.vueuse.org/nuxt.html
-		'@vueuse/nuxt', // https://vueuse.org/
-		'nuxt-icon', // https://github.com/nuxt-modules/icon
-		'nuxt-og-image',
-		'nuxt-schema-org', // https://nuxtseo.com/schema-org/guides/quick-setup
-		'nuxt-simple-sitemap', // https://nuxtseo.com/sitemap/getting-started/how-it-works
+	modules: [// '@nuxt/devtools', // https://devtools.nuxtjs.org/
+		'@nuxt/image', '@nuxt/ui', // '@nuxtjs/color-mode',
+		'@nuxtjs/google-fonts', // https://motion.vueuse.org/nuxt.html
+		'@vueuse/motion/nuxt', // https://vueuse.org/
+		'@vueuse/nuxt', // 'nuxt-icon', // https://github.com/nuxt-modules/icon
+		'nuxt-og-image', // https://nuxtseo.com/schema-org/guides/quick-setup
+		'nuxt-schema-org', // https://nuxtseo.com/sitemap/getting-started/how-it-works 
+		'@nuxtjs/seo',
 	],
 
 	experimental: {
@@ -70,7 +66,7 @@ export default defineNuxtConfig({
 	},
 
 	// Nuxt DevTools - https://devtools.nuxtjs.org/
-	devtools: { enabled: true },
+	// devtools: { enabled: false },
 
 	ui: {
 		icons: 'all',
@@ -98,7 +94,9 @@ export default defineNuxtConfig({
 
 	site: {
 		url: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000',
-		name: 'AgencyOS',
+		name: 'Lewis Digital',
+		description: 'Welcome to Lewis Digital',
+    	defaultLocale: 'en',
 	},
 
 	// OG Image Configuration - https://nuxtseo.com/og-image/getting-started/installation
